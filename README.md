@@ -26,6 +26,16 @@ This ensures authentication still works when the automatic browser/clipboard tok
 
 If startup logs show both `Token auto-auth included in browser/clipboard URL.` and later `Token auto-auth not delivered.`, treat the final result as **not delivered** and use manual URL fragment auth.
 
+### How to make auto token login more likely next time
+
+Automatic token display/login works best when `openclaw dashboard` runs in a local desktop session (with GUI + clipboard/browser access) on the same machine where you open the dashboard.
+
+For SSH/headless remote sessions, auto-delivery is not guaranteed; keep using:
+
+```text
+http://localhost:18789/#token=<OPENCLAW_GATEWAY_TOKEN>
+```
+
 Use the token from `OPENCLAW_GATEWAY_TOKEN` (or `gateway.auth.token`) and append it manually:
 
 ```text
