@@ -19,3 +19,13 @@ When `openclaw dashboard` is started on a remote host without GUI/clipboard supp
    ```
 
 This ensures authentication still works when the automatic browser/clipboard token handoff is unavailable.
+
+### Why the token is not shown every time
+
+`openclaw dashboard` can only auto-deliver the token when the runtime can open/copy the auth URL successfully. If you see messages like `Copy to clipboard unavailable`, `No GUI detected`, or `Token auto-auth not delivered`, this is expected in remote/headless sessions.
+
+Use the token from `OPENCLAW_GATEWAY_TOKEN` (or `gateway.auth.token`) and append it manually:
+
+```text
+http://localhost:18789/#token=<your-token>
+```
