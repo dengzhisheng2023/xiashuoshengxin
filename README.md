@@ -24,6 +24,8 @@ This ensures authentication still works when the automatic browser/clipboard tok
 
 `openclaw dashboard` can only auto-deliver the token when the runtime can open/copy the auth URL successfully. If you see messages like `Copy to clipboard unavailable`, `No GUI detected`, or `Token auto-auth not delivered`, this is expected in remote/headless sessions.
 
+If startup logs show both `Token auto-auth included in browser/clipboard URL.` and later `Token auto-auth not delivered.`, treat the final result as **not delivered** and use manual URL fragment auth.
+
 Use the token from `OPENCLAW_GATEWAY_TOKEN` (or `gateway.auth.token`) and append it manually:
 
 ```text
