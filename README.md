@@ -30,6 +30,8 @@ If startup logs show both `Token auto-auth included in browser/clipboard URL.` a
 
 Automatic token display/login works best when `openclaw dashboard` runs in a local desktop session (with GUI + clipboard/browser access) on the same machine where you open the dashboard.
 
+If you want the browser to auto-open and auto-login next time, avoid SSH/headless startup and run it directly in your local desktop terminal.
+
 For SSH/headless remote sessions, auto-delivery is not guaranteed; keep using:
 
 ```text
